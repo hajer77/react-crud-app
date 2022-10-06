@@ -31,11 +31,11 @@ export default function EditUser() {
 
     const onSubmit= async(e)=>{
        e.preventDefault();
-       await axios.put(`http://localhost:8080/user/${id}`,user);
+       await axios.put(`https://java-spring-boot-backend.herokuapp.com/${id}`,user);
        navigate("/");
     };
     const loadUser= async()=>{
-        const result = await axios.get(`http://localhost:8080/user/${id}`);
+        const result = await axios.get(`https://java-spring-boot-backend.herokuapp.com/${id}`);
         setUser(result.data);
      };
   return (
